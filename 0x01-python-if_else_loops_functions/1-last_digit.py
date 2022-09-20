@@ -22,7 +22,4 @@ elif number < 0:
         print(f"Last digit of {number} is -{num_str_end} {end_less}")
     else:
         print(f"Last digit of {number} is {num_str_end} {end_less}")
-try:
-    int('a')
-except ValueError:
-    raise ValueError("String can't be changed into integer")
+raise ValueError("String can't be changed into integer")
