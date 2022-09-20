@@ -10,16 +10,15 @@ num = int(num_str_end)
 
 if number >= 0:
     if num > 5:
-        print(f"Last digit of {number} is {num_str_end} {end_gtr}")
+        print(f"Last digit of {number} is {num_str_end} {end_gtr}", end="")
     elif num == 0:
-        print(f"Last digit of {number} is {num_str_end} {end_eq}")
+        print(f"Last digit of {number} is {num_str_end} {end_eq}", end="")
     elif (num < 6) and (num != 0):
-        print(f"Last digit of {number} is {num_str_end} {end_less}")
+        print(f"Last digit of {number} is {num_str_end} {end_less}", end="")
 elif number == 0:
-    print(f"Last digit of {number} is {num_str_end} {end_eq}")
+    print(f"Last digit of {number} is {num_str_end} {end_eq}", end="")
 elif number < 0:
     if num != 0:
-        print(f"Last digit of {number} is -{num_str_end} {end_less}")
+        print(f"Last digit of {number} is -{num_str_end} {end_less}", end="")
     else:
-        print(f"Last digit of {number} is {num_str_end} {end_less}")
-raise ValueError("String can't be changed into integer")
+        print(f"Last digit of {number} is {num_str_end} {end_less}", end="")
