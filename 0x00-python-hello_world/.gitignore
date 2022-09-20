@@ -2,6 +2,5 @@
 main.py
 .gitignore
 q
-lists.h
 10-linked_lists.c
 10-main.c
