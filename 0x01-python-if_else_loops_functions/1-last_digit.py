@@ -9,16 +9,17 @@ num_str_end = str(number)[-1]
 num = int(num_str_end)
 
 if number >= 0:
-	if num > 5:
-		print(f"Last digit of {number} is {num_str_end} {end_gtr}")
-	elif num == 0:
-		print(f"Last digit of {number} is {num_str_end} {end_eq}")
-	elif (num < 6) and (num != 0):
-		print(f"Last digit of {number} is {num_str_end} {end_less}")
+    if num > 5:
+        print(f"Last digit of {number} is {num_str_end} {end_gtr}")
+    elif num == 0:
+        print(f"Last digit of {number} is {num_str_end} {end_eq}")
+    elif (num < 6) and (num != 0):
+        print(f"Last digit of {number} is {num_str_end} {end_less}")
 elif number == 0:
-	print(f"Last digit of {number} is {num_str_end} {end_eq}")
+    print(f"Last digit of {number} is {num_str_end} {end_eq}")
 elif number < 0:
-	if num != 0:
-		print(f"Last digit of {number} is -{num_str_end} {end_less}")
-	else:
-		print(f"Last digit of {number} is {num_str_end} {end_less}")
+    if num != 0:
+        print(f"Last digit of {number} is -{num_str_end} {end_less}")
+    else:
+        print(f"Last digit of {number} is {num_str_end} {end_less}")
+print()
