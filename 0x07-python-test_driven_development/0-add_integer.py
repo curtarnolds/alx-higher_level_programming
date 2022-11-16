@@ -6,6 +6,7 @@ add_integer adds a and b (cast as integers) and returns the result
 The function raises a TypeError when a or b are neither integers nor floats
 """
 
+
 def add_integer(a, b=98):
     """Returns the result of adding two integers.
 
