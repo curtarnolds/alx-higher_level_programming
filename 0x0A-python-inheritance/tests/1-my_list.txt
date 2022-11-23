@@ -1,5 +1,6 @@
 Import module:
-			>>> import my_list
+			>>> MyList = __import__("1-my_list").MyList
+
 Checking for module docstring:
          >>> m = __import__("1-my_list").__doc__
          >>> len(m) > 1
@@ -16,7 +17,7 @@ Checking for method docstring:
 	  True
 
 Checking that MyList inherits from list:
-	  >>> issubclass(MyList(), list)
+	  >>> issubclass(MyList, list)
 	  True
 
 Checking for empty list:
