@@ -37,6 +37,8 @@ class Base():
         Args:
             list_objs (list): list of instances who inherit Base
         """
+        if list_objs is None:
+            return []
         with open(f'{cls.__name__}.json', mode='w', encoding='utf-8')\
                 as a_file:
             list_dict = [item.to_dictionary()
