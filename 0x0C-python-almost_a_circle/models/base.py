@@ -77,4 +77,4 @@ class Base():
                 return [cls.create(**item) for item in cls.from_json_string(
                     f.read())]
         else:
-            return []
+            return '[]'
