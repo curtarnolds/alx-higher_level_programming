@@ -73,7 +73,7 @@ class Base():
         """Return a list of instances that depend on the current class using
         this method."""
         if not f'{cls.__name__}.json':
-            return []
+            return '[]'
         with open(f'{cls.__name__}.json', mode='r', encoding='utf-8') as f:
             return [cls.create(**item) for item in cls.from_json_string(
                 f.read())]
