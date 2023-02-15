@@ -40,7 +40,7 @@ class Base():
         with open(f'{cls.__name__}.json', mode='w', encoding='utf-8')\
                 as json_file:
             if list_objs is None:
-                json_file.write('[]')
+                json_file.write([])
             list_dict = [item.to_dictionary()
                          for item in list_objs]  # convert each object
             # in the list into a dictionary to avoid JSON serialize error
