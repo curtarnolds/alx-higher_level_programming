@@ -72,9 +72,9 @@ class Base():
     def load_from_file(cls):
         """Return a list of instances that depend on the current class using
         this method."""
-        if f'{cls.__name__}.json':
+        try:
             with open(f'{cls.__name__}.json', mode='r', encoding='utf-8') as f:
                 return [cls.create(**item) for item in cls.from_json_string(
                     f.read())]
-        else:
-            return '[]'
+        except IOError:
+            return []
