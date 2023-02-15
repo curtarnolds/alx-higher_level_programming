@@ -71,5 +71,5 @@ class Square(Rectangle):
 
     def __str__(self):
         """__str__ method"""
-        return f'[{self.__class__.__name__}] ({self.id}) <{self.x}>/<{self.y}>\
+        return f'[{self.__class__.__name__}] ({self.id}) {self.x}/{self.y}\
  - <{self.height}>'
