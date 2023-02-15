@@ -37,12 +37,15 @@ class Base():
         Args:
             list_objs (list): list of instances who inherit Base
         """
-        with open(f'{cls.__name__}.json', mode='w', encoding='utf-8')\
-                as a_file:
-            list_dict = [item.to_dictionary()
-                         for item in list_objs]  # convert each object
+        try:
+            with open(f'{cls.__name__}.json', mode='w', encoding='utf-8')\
+                    as a_file:
+                list_dict = [item.to_dictionary()
+                             for item in list_objs]  # convert each object
             # in the list into a dictionary to avoid JSON serialize error
             a_file.write(cls.to_json_string(list_dict))
+        except IOError:
+            return []
 
     @staticmethod
     def from_json_string(json_string):
