@@ -44,7 +44,7 @@ class Base():
             list_dict = [item.to_dictionary()
                          for item in list_objs]  # convert each object
             # in the list into a dictionary to avoid JSON serialize error
-            json_file.write(cls.to_json_string(list_dict))
+            json_file.write(Base.to_json_string(list_dict))
 
     @staticmethod
     def from_json_string(json_string):
