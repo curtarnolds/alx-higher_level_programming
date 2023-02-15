@@ -60,10 +60,10 @@ class Base():
         # This creates a dummy instance of the class used to
         # call `create`
         if cls.__name__ == 'Rectangle':
-            dummy_instance = cls(width=0, height=0, x=0, y=0,
+            dummy_instance = cls(width=1, height=1, x=0, y=0,
                                  id=None)
         else:
-            dummy_instance = cls(size=0, x=0, y=0,
+            dummy_instance = cls(size=1, x=0, y=0,
                                  id=None)
         dummy_instance.update(**dictionary)
         return dummy_instance
@@ -72,8 +72,9 @@ class Base():
     def load_from_file(cls):
         """Return a list of instances that depend on the current class using
         this method."""
-        if not f'{cls.__name__}.json':
-            return '[]'
-        with open(f'{cls.__name__}.json', mode='r', encoding='utf-8') as f:
-            return [cls.create(**item) for item in cls.from_json_string(
-                f.read())]
+        if f'{cls.__name__}.json':
+            with open(f'{cls.__name__}.json', mode='r', encoding='utf-8') as f:
+                return [cls.create(**item) for item in cls.from_json_string(
+                    f.read())]
+        else:
+            return []
