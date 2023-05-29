@@ -1,9 +1,4 @@
-0-positive_or_negative.py - assigns a random number to variable number each time it is called
-1-last_digit.py assigns a random signed number to the variable number each time it is executed and prints the last digit of the number stored in number
-2-print_alphabet.py prints the ASCII alphabet in lowercase, not followed by a new line
-3-print_alphabt.py prints the ASCII alphabet in lowercase, not followed by a new line
-4-print_hexa.py prints all numbers from 0  to 98 in decimal and in hexadecimal
-5-print_comb2.py prints numbers from 0 to 99
-6-print_comb3.py prints all possible different combinations of two digits
-7-islower.py checks for lowercase character
-8-uppercase.py prints a string in uppercase followed by a new line
+# 0x01. Python - if/else, loops, functions
+
+This folder contains code solutions for python hands-on projects that tests on controlled flow, loops and functions.
+- [0-positive_or_negative.py](./0-positive_or_negative.py) - a program that states if a randomly assigned number is positive/negative/zero

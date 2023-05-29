@@ -1,0 +1,33 @@
+"""This module contains the matrix_divided function
+
+matrix_divided(matrix, div) divides all elements of the matrix `matrix` by
+`div`. `matrix` has to be a list of lists of integers or floats otherwise raise
+a TypeError
+"""
+
+
+def matrix_divided(matrix, div):
+    """Divides each element of `matrix` by `div`.
+
+    matrix must be a list of lists of integers or floats.
+    Each row of `matrix` must be of the same size
+    div must be an integer or a float
+	 div cannot be equal to 0
+
+	 Args:
+	   matrix (list): A list of lists of integers or floats. Each row of matrix
+		  must be of the same length
+		div (int/float): Either a float or integer greater than 0
+
+	 Raises:
+	   TypeError: If matrix is not a list of lists of numbers
+           TypeError: If the rows of matrix are not the same size
+           TypeError: If div is not a number
+	   ZeroDivisionError: If div is equal to 0
+
+	 Returns:
+		A new matrix with each element multiplied by div
+    """
+    if matrix == [] or (not isinstance(matrix, list)) or not\
+    all(isinstance(row, list) for row in matrix) or not\
+    not all(is
