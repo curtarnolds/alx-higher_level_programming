@@ -99,7 +99,7 @@ class Rectangle:
             TypeError if either `rect_1` or `rect_2` is not a `Rectangle`.
         """
         if not isinstance(rect_1, Rectangle):
-            raise TypeError('rect_1 must be aan instance of Rectangle')
+            raise TypeError('rect_1 must be an instance of Rectangle')
         if not isinstance(rect_2, Rectangle):
-            raise TypeError('rect_2 must be aan instance of Rectangle')
+            raise TypeError('rect_2 must be an instance of Rectangle')
         return rect_2 if rect_2.area() > rect_1.area() else rect_1
