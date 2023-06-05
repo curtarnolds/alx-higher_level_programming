@@ -4,7 +4,6 @@
 
 class Rectangle:
     """Define a rectangle"""
-
     number_of_instances = 0
     print_symbol = "#"
 
@@ -12,7 +11,7 @@ class Rectangle:
         """Initialize with optionnal width and height."""
         self.width = width
         self.height = height
-        __class__.number_of_instances += 1
+        self.__class__.number_of_instances += 1
 
     @property
     def width(self) -> int:
@@ -89,4 +88,4 @@ class Rectangle:
     def __del__(self) -> None:
         """Delete `Rectangle` instance."""
         print('Bye rectangle...')
-        __class__.number_of_instances -= 1
+        self.__class__.number_of_instances -= 1

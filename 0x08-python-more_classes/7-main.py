@@ -17,12 +17,6 @@ print("--")
 
 print(my_rectangle_1)
 print(Rectangle.print_symbol)
-print(my_rectangle_1.print_symbol)
-print(my_rectangle_2.print_symbol)
-print(my_rectangle_2.__dict__)
-print(Rectangle.__dict__)
-print(my_rectangle_1.__class__.__dict__)
-print(my_rectangle_1.__dict__)
 print("--")
 
 my_rectangle_3 = Rectangle(7, 3)
