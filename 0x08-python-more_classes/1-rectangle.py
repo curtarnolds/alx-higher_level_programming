@@ -5,13 +5,13 @@
 class Rectangle:
     """Define a rectangle"""
 
-    def __init__(self, width=0, height=0):
+    def __init__(self, width: int = 0, height: int = 0):
         """Initialize with optionnal width and height."""
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
-    def width(self):
+    def width(self) -> int:
         """Return the width of the rectangle"""
         return self.__width
 
@@ -33,7 +33,7 @@ class Rectangle:
         self.__width = value
 
     @property
-    def height(self):
+    def height(self) -> int:
         """Return the height of the rectangle"""
         return self.__height
 
