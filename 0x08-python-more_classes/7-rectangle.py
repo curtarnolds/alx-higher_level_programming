@@ -12,7 +12,7 @@ class Rectangle:
         """Initialize with optionnal width and height."""
         self.width = width
         self.height = height
-        __class__.number_of_instances += 1
+        self.__class__.number_of_instances += 1
 
     @property
     def width(self) -> int:
