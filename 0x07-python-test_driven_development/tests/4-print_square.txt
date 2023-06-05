@@ -1,0 +1,68 @@
+=========================
+How to Use 3-print_square
+=========================
+
+``print_square`` prints a square with the character `#`
+
+	>>> print_square = __import__('3-print_square').print_square
+
+Numbers
+========
+
+`print_square` works with positive integers or zero
+
+::
+
+	>>> print_square(2)
+	##
+	##
+
+	>>> print_square(0)
+
+
+But not negative ones
+
+::
+
+	>>> print_square(-2)
+	Traceback (most recent call last):
+	TypeError: size must be >= 0
+
+Floats are also not allowed
+
+::
+
+	>>> print_square(3.0)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+	>>> print_square(-2.0)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+Non-Numbers
+===========
+
+Non-number objects will raise a TypeError
+
+::
+
+	>>> print_square('string')
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+	>>> print_square({})
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+	>>> print_square((2,))
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+	>>> print_square([2])
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+	>>> print_square(None)
+	Traceback (most recent call last):
+	TypeError: size must be an integer

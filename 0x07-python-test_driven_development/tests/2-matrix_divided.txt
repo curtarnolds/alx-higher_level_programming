@@ -1,0 +1,86 @@
+===========================
+How to Use 2-matrix_divided
+===========================
+
+``matrix_divided`` is a function that divides all the elements of
+a matrix.
+
+Lists
+=============
+`matrix_divided` works well with list of lists
+
+::
+
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+	>>> matrix = [[1, 2, 3],
+	...	[4, 5, 6]]
+
+	>>> matrix_divided(matrix, 3)
+	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+But only when all members of the matrix are of the same size
+
+::
+
+	>>> mat_dif_size = [[1, 2, 3],
+	...				 [4, 5]]
+	>>> matrix_divided(mat_dif_size, 2)
+	Traceback (most recent call last):
+	TypeError: Each row of the matrix must have the same size
+
+What if `matrix` is an empty list
+
+::
+
+	>>> matrix_divided([], 3)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Or `div` is not a number
+
+::
+
+	>>> matrix_divided([[2, 3], [4, 6]], 'str')
+	Traceback (most recent call last):
+	TypeError: div must be a number
+
+
+If we miss out on `div`
+
+::
+
+	>>> matrix_divided([[2, 3], [4, 6]])
+	Traceback (most recent call last):
+	TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+If it's a list of lists of other datatypes?
+
+::
+
+	>>> matrix_divided([[{},{}]],3)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Or a list of other datatypes
+
+::
+
+	>>> matrix_divided([(2, 3), (6, 8)], 2)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Non-Lists
+=========
+`matrix` cannot be anything besides a list
+
+::
+
+	>>> matrix_divided(10, 2)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+	>>> matrix_divided(([2, 3], [4,5]), 2)
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+	>>> matrix_divided(None, 2)
+	TypeError: matrix must be a matrix (list of lists) of integers/floats

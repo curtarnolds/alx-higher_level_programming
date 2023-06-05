@@ -1,0 +1,81 @@
+=============================
+How to Use 5-text_indentation
+=============================
+
+`text_indentation` prints a text with 2 new lines after each of the characters
+`.`, `?` and `:`
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Strings
+=======
+
+`text_indentation` works with strings
+
+::
+
+	>>> text_indentation("Hello World. How are you?")
+	Hello World
+	<BLANKLINE>
+	How are you
+	<BLANKLINE>
+
+	>>> text_indentation("Hello World, how are you?")
+	Hello World, how are you
+	<BLANKLINE>
+
+Even if there are none of the characters
+
+::
+
+	>>> text_indentation('Hello dear')
+	Hello dear
+
+Or just the characters
+
+::
+
+	>>> text_indentation('.')
+	<BLANKLINE>
+	<BLANKLINE>
+
+	>>> text_indentation('.?')
+	<BLANKLINE>
+	<BLANKLINE>
+	<BLANKLINE>
+	<BLANKLINE>
+
+	>>> text_indentation('.?:')
+	<BLANKLINE>
+	<BLANKLINE>
+	<BLANKLINE>
+	<BLANKLINE>
+	<BLANKLINE>
+	<BLANKLINE>
+
+Non-strings
+===========
+
+Non-strings raise a TypeError
+
+::
+
+	>>> text_indentation(['hello', 'world.'])
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation(('hello', 'world.'))
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation({'hello': 'world.'})
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation(None)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation(5)
+	Traceback (most recent call last):
+	TypeError: text must be a string
