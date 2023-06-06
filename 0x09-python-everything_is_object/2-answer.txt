@@ -1,4 +1,1 @@
-[main 77989ed] 1. Where are you?\n
- 2 files changed, 1 insertion(+)
- create mode 100644 0x09-python-everything_is_an_object/1-answer.txt
- create mode 100644 0x09-python-everything_is_an_object/2-answer.txt
+No
