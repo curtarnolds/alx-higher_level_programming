@@ -35,6 +35,14 @@ But not float overflows.
 	Traceback (most recent call last):
 	OverflowError: cannot convert float infinity to integer
 
+Or float NaNs.
+
+::
+
+	>>> add_integer(float('NaN'))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
+
 What if we give it only one argument?
 
 ::
