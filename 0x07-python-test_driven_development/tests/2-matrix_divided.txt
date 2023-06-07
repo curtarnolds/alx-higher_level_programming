@@ -79,8 +79,4 @@ Non-Lists
 	Traceback (most recent call last):
 	TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-	matrix_divided(([2, 3], [4, 5]), 2)
-	TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-	matrix_divided(None, 2)
-	TypeError: matrix must be a matrix (list of lists) of integers/floats
