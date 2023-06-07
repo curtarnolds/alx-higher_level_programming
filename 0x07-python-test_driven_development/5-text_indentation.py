@@ -28,6 +28,7 @@ def text_indentation(text: str) -> None:
         if char in ('.', '?', ':'):
             if i + 1 < len(list_text):
                 next_char = list_text[i + 1]
+            print(char, end="")
             print()
             print()
             if next_char == ' ':

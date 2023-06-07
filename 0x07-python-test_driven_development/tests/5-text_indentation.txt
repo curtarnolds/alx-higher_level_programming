@@ -15,13 +15,13 @@ Strings
 ::
 
 	>>> text_indentation("Hello World. How are you?")
-	Hello World
+	Hello World.
 	<BLANKLINE>
-	How are you
+	How are you?
 	<BLANKLINE>
 
 	>>> text_indentation("Hello World, how are you?")
-	Hello World, how are you
+	Hello World, how are you?
 	<BLANKLINE>
 
 Even if there are none of the characters
@@ -36,21 +36,21 @@ Or just the characters
 ::
 
 	>>> text_indentation('.')
-	<BLANKLINE>
+	.
 	<BLANKLINE>
 
 	>>> text_indentation('.?')
+	.
 	<BLANKLINE>
-	<BLANKLINE>
-	<BLANKLINE>
+	?
 	<BLANKLINE>
 
 	>>> text_indentation('.?:')
+	.
 	<BLANKLINE>
+	?
 	<BLANKLINE>
-	<BLANKLINE>
-	<BLANKLINE>
-	<BLANKLINE>
+	:
 	<BLANKLINE>
 
 What if there are no spaces?
@@ -58,9 +58,9 @@ What if there are no spaces?
 ::
 
 	>>> text_indentation('Hello World.How are you?')
-	Hello World
+	Hello World.
 	<BLANKLINE>
-	How are you
+	How are you?
 	<BLANKLINE>
 
 Non-strings
