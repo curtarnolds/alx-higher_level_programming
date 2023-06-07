@@ -11,11 +11,10 @@ def matrix_divided(matrix, div):
         matrix (list): A list of lists of integers.
         div (int/float): An int or float.
     """
-    if ((isinstance(matrix, list) and
+    if not ((isinstance(matrix, list) and
             all(isinstance(item, list) for item in matrix)) and
             (all(isinstance(num, int) for item in matrix for num in item) or
-             all(isinstance(num, int) for item in matrix for num in item)))\
-            is False:
+             all(isinstance(num, float) for item in matrix for num in item))):
         raise TypeError(
             'matrix must be a matrix (list of lists) of integers/floats')
 
