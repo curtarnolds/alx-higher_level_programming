@@ -27,6 +27,14 @@ It also works with floating values.
 	>>> add_integer(2.0, 3.0)
 	5
 
+But not float overflows.
+
+::
+
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
 What if we give it only one argument?
 
 ::

@@ -53,6 +53,16 @@ Or just the characters
 	<BLANKLINE>
 	<BLANKLINE>
 
+What if there are no spaces?
+
+::
+
+	>>> text_indentation('Hello World.How are you?')
+	Hello World
+	<BLANKLINE>
+	How are you
+	<BLANKLINE>
+
 Non-strings
 ===========
 
