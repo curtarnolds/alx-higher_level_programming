@@ -78,5 +78,3 @@ Non-Lists
 	>>> matrix_divided(10, 2)
 	Traceback (most recent call last):
 	TypeError: matrix must be a matrix (list of lists) of integers/floats
-
-
