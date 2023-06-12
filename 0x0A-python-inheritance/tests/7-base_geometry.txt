@@ -1,0 +1,80 @@
+Test File For 7-base_geometry
+=============================
+
+Checking for Docstrings
+=======================
+Module should have a docstring.
+
+::
+
+	>>> md_doc = __import__('7-base_geometry').__doc__
+	>>> len(md_doc) > 0
+	True
+
+The class is not left out.
+
+::
+
+	>>> len(__import__('7-base_geometry').BaseGeometry.__doc__) > 0
+	True
+
+Finally the methods
+
+::
+
+	>>> len(__import__('7-base_geometry').BaseGeometry.area.__doc__) > 0
+	True
+
+	>>> len(__import__('7-base_geometry').BaseGeometry.integer_validator.__doc__) > 0
+	True
+
+
+Testing the BaseGeometry class
+==============================
+
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+	>>> bg = BaseGeometry()
+
+Instantiation works
+
+::
+
+	>>> print(bg) #doctest: +ELLIPSIS
+	<7-base_geometry.BaseGeometry object at 0x...>
+
+Checking area() method
+
+::
+
+	>>> bg.area()
+	Traceback (most recent call last):
+	Exception: area() is not implemented
+
+	>>> bg.area("help")
+	Traceback (most recent call last):
+	TypeError: area() takes 1 positional argument but 2 were given
+
+Checking integer_validator() method
+
+::
+
+	>>> bg.integer_validator()
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+	>>> bg.integer_validator("help")
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+	>>> bg.integer_validator("my_int", 12)
+
+	>>> bg.integer_validator("name", "John")
+	Traceback (most recent call last):
+	TypeError: <name> must be an integer
+
+	>>> bg.integer_validator(4, 2)
+	Traceback (most recent call last):
+	TypeError
+
+	
