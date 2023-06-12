@@ -26,3 +26,6 @@ A simple `doctest` for `1-my_list` module.
 >>> MyList([None, None])
 [None, None]
 
+>>> MyList(None)
+Traceback (most recent call last):
+TypeError: 'NoneType' object is not iterable
