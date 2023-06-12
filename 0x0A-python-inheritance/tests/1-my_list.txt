@@ -39,4 +39,5 @@ TypeError: 'NoneType' object is not iterable
 >>> MyList()
 []
 
-
+>>> MyList([1,2,3,4,5])
+[1, 2, 3, 4, 5]
