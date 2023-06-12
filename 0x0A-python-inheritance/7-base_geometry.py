@@ -16,6 +16,8 @@ class BaseGeometry:
             name (str): A name
             value (int): An int
     """
+        self.__name = name
+        self.__value = value
         if not isinstance(name, str):
             raise TypeError()
         if not isinstance(value, int):
