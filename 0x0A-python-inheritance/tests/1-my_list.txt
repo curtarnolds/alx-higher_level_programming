@@ -41,3 +41,6 @@ TypeError: 'NoneType' object is not iterable
 
 >>> MyList([1,2,3,4,5])
 [1, 2, 3, 4, 5]
+
+>>> MyList([-2, -5, -1, -4]).print_sorted()
+[-5, -4, -2, -1]
