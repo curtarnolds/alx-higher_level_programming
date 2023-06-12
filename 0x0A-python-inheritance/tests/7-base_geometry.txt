@@ -8,7 +8,7 @@ Module should have a docstring.
 ::
 
 	>>> md_doc = __import__('7-base_geometry').__doc__
-	>>> len(md_doc) > 0
+	>>> len(md_doc) > 1
 	True
 
 The class is not left out.
