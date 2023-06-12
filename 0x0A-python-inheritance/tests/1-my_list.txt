@@ -23,7 +23,7 @@ A simple `doctest` for `1-my_list` module.
 >>> MyList({1: 'a', 2: '3'})
 [1, 2]
 
->>> MyList([None, None])
+>>> MyList([None, None]).print_sorted()
 [None, None]
 
 >>> MyList(None)
