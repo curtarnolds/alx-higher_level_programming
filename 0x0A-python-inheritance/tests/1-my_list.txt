@@ -33,5 +33,5 @@ TypeError: 'NoneType' object is not iterable
 >>> MyList("sl")
 ['s', 'l']
 
->>> MyList({4,5,2,4,1})
+>>> MyList({4,5,2,4,1}).print_sorted()
 [1, 2, 4, 5]
