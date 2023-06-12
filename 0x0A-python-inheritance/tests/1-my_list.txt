@@ -32,3 +32,6 @@ TypeError: 'NoneType' object is not iterable
 
 >>> MyList("sl")
 ['s', 'l']
+
+>>> MyList("sl").print_sorted()
+['l', 's']
