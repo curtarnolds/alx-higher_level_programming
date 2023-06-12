@@ -75,7 +75,7 @@ Checking integer_validator() method
 
 	>>> bg.integer_validator("name", "John")
 	Traceback (most recent call last):
-	TypeError: <name> must be an integer
+	TypeError: name must be an integer
 
 	>>> bg.integer_validator(4, 2)
 	Traceback (most recent call last):
@@ -89,19 +89,19 @@ Checking integer_validator() method
 
 	>>> bg.integer_validator("marks", -4)
 	Traceback (most recent call last):
-	ValueError: <marks> must be greater than 0
+	ValueError: marks must be greater than 0
 
 	>>> bg.integer_validator("scores", 0)
 	Traceback (most recent call last):
-	ValueError: <scores> must be greater than 0
+	ValueError: scores must be greater than 0
 
 	>>> bg.integer_validator("nope", [1, 2, 8, 9])
 	Traceback (most recent call last):
-	TypeError: <nope> must be an integer
+	TypeError: nope must be an integer
 
 	>>> bg.integer_validator("price", 2.2)
 	Traceback (most recent call last):
-	TypeError: <price> must be an integer
+	TypeError: price must be an integer
 
 	>>> bg.integer_validator("hi", 5, True)
 	Traceback (most recent call last):
