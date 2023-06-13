@@ -1,4 +1,4 @@
-#!/usr/python3
+#!/usr/bin/python3
 """A function that creates an object from a JSON file."""
 
 
@@ -10,5 +10,5 @@ def load_from_json_file(filename: str) -> object:
     """
     import json
 
-    with open(filename) as json_file:
+    with open(filename, mode='r', encoding='utf-8') as json_file:
         return json.load(json_file)
