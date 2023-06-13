@@ -20,10 +20,10 @@ class Student:
         Description:
             If `attrs` is given, only attribuutes in `attrs` are retrieved.
         """
-        if attrs and len(attrs) > 0 and isinstance(attrs, list):
+        if attrs and len(attrs) > 0 and type(attrs) == list:
             attr_dict = {}
             for item in attrs:
-                if hasattr(self, item) and isinstance(item, str):
+                if (type(item) == str) and hasattr(self, item):
                     attr_dict[item] = self.__dict__[item]
             return attr_dict
         return self.__dict__
