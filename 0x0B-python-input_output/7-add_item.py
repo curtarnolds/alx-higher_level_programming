@@ -15,7 +15,7 @@ list_obj = []
 try:
     list_obj = load_from_json_file(filename)
 except FileNotFoundError:
-    save_to_json_file([], filename)
+    pass
 
 for item in sys.argv[1:]:
     list_obj.append(item)
