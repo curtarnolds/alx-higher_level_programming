@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Base module for all classes in the models package."""
 import json
+import csv
 
 
 class Base:
@@ -37,8 +38,8 @@ class Base:
             list_objs (list): List of instances that inherit from Base.
         """
         with open(f"{cls.__name__}.json", mode='w') as json_file:
-            dictionary = [item.to_dictionary() for item in list_objs]
-            json_dict = cls.to_json_string(dictionary)
+            list_dict = [item.to_dictionary() for item in list_objs]
+            json_dict = cls.to_json_string(list_dict)
             json_file.write(json_dict)
 
     def from_json_string(json_string):
@@ -74,7 +75,27 @@ class Base:
         except FileNotFoundError:
             return []
 
-    # def save_to_file_csv(cls, list_objs):
-    #     """Serialize to CSV."""
-    #     with open(f"{cls.__name__}.csv", 'w') as csv_file:
+    @classmethod
+    def load_from_file_csv(cls):
+        """Deserialize from csv."""
+        try:
+            with open(f"{cls.__name__}.csv", 'rt') as csv_file:
+                reader = csv.reader(csv_file)
+                keys = reader.__next__()
+                dict_list = []
+                for value in reader:
+                    dict_list.append({k: int(v) for k, v in zip(keys, value)})
+                return [cls.create(**item) for item in dict_list]
+        except FileNotFoundError:
+            return []
 
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Serialize to CSV."""
+        with open(f"{cls.__name__}.csv", 'wt') as csv_file:
+            list_dict = [item.to_dictionary() for item in list_objs]
+            keys = list_dict[0].keys()
+            writer = csv.writer(csv_file)
+            writer.writerow(keys)
+            for item in list_dict:
+                writer.writerow(item.values())
