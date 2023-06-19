@@ -1,5 +1,7 @@
 #!/usr/bin/pyton3
-"""A Square Module."""
+"""A Square Module.
+Depends on the Rectangle module.
+"""
 from models.rectangle import Rectangle
 
 
