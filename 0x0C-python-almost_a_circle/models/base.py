@@ -61,8 +61,7 @@ class Base:
             dictionary (str): string representation of a dictionary.
         """
         dummy_dict = cls(2, 3)
-        for key, value in dictionary.items():
-            setattr(dummy_dict, key, value)
+        dummy_dict.update(**dictionary)
         return dummy_dict
 
     @classmethod
@@ -100,11 +99,11 @@ class Base:
             for item in list_dict:
                 writer.writerow(item.values())
 
-    def draw(list_rectangles, list_squares):
-        """Opens a window and draws all the Rectangles and Squares.
+    # def draw(list_rectangles, list_squares):
+    #     """Opens a window and draws all the Rectangles and Squares.
 
-        Args:
-            list_rectangles (list):
-            list_squares (list):
-        """
-        pass
+    #     Args:
+    #         list_rectangles (list):
+    #         list_squares (list):
+    #     """
+        # pass
