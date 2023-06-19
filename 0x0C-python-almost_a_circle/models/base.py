@@ -99,3 +99,12 @@ class Base:
             writer.writerow(keys)
             for item in list_dict:
                 writer.writerow(item.values())
+
+    def draw(list_rectangles, list_squares):
+        """Opens a window and draws all the Rectangles and Squares.
+
+        Args:
+            list_rectangles (list):
+            list_squares (list):
+        """
+        pass
