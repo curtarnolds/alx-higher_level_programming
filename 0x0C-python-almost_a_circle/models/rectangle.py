@@ -18,7 +18,7 @@ class Rectangle(Base):
         """
         args = {"width": width, "height": height, "x": x, "y": y}
         for arg_name, arg_value in args.items():
-            if not isinstance(arg_value, int):
+            if type(arg_value) != int:
                 raise TypeError(f"{arg_name} must be an integer")
 
             if arg_name in ("width", "height") and arg_value <= 0:
