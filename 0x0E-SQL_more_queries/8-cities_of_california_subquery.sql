@@ -13,3 +13,4 @@ WHERE
 		WHERE
 			name = 'California'
 	)
+ORDER BY cities.id
