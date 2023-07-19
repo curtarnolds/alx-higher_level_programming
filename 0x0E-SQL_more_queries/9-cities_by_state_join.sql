@@ -6,4 +6,4 @@ SELECT
 FROM
 	cities
 	JOIN states
-ORDER BY cities.id
+ORDER BY cities.id ASC
