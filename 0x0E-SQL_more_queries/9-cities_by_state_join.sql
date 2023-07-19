@@ -6,3 +6,4 @@ SELECT
 FROM
 	cities
 	JOIN states
+ORDER BY cities.id
