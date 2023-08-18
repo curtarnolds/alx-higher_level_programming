@@ -13,6 +13,6 @@ if __name__ == "__main__":
     cur = db.cursor()
     col_count = cur.execute("SELECT * FROM states ORDER BY id")
     table_rows = cur.fetchall()
-    for row in table_rows[-2:]:
+    for row in table_rows:
         if row[1][0] == 'N':
             print(row)
