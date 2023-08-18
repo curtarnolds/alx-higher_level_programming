@@ -14,7 +14,8 @@ if __name__ == "__main__":
     col_count = cur.execute(f"SELECT DISTINCT(cities.name)\
                             FROM `cities` INNER JOIN `states` ON \
                             cities.state_id = (SELECT states.id FROM states\
-                            WHERE states.name = '{args[4].split(';')[0]}')")
+                            WHERE states.name = '{args[4].split(';')[0]}')\
+                            ORDER BY cities.id")
     table_rows = cur.fetchall()
     temp_list = [name[0] for name in table_rows]
     print(", ".join(temp_list))
