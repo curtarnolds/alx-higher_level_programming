@@ -14,4 +14,5 @@ if __name__ == "__main__":
     col_count = cur.execute("SELECT * FROM states ORDER BY id")
     table_rows = cur.fetchall()
     for row in table_rows[-2:]:
-        print(row)
+        if row[1][0] == 'N':
+            print(row)
