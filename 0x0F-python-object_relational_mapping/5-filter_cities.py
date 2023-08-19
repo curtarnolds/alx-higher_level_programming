@@ -17,7 +17,6 @@ if __name__ == "__main__":
                             WHERE states.name = '{args[4].split(';')[0]}')\
                             ORDER BY cities.id ASC")
     table_rows = cur.fetchall()
-    print(table_rows)
     temp_list = [name[0] for name in table_rows]
     print(", ".join(temp_list))
     cur.close()
