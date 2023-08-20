@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """A simple State class"""
 from sqlalchemy import Column, String, Integer
 from sqlalchemy.ext.declarative import declarative_base
