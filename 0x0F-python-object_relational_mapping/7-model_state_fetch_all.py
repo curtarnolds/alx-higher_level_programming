@@ -12,7 +12,7 @@ if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
         sys.argv[1], sys.argv[2], sys.argv[3]))
     with Session(engine) as session:
-        statement = select(State).order_by('id')
+        statement = select(State).order_by(State.id)
         rows = session.execute(statement).all()
         for row in rows:
             print(f"{row[0].id}: {row[0].name}")
