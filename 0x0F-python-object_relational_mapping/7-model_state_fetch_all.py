@@ -5,7 +5,7 @@ import sys
 from sqlalchemy import (create_engine)
 from sqlalchemy import select
 from sqlalchemy.orm import Session
-from model_state import Base, State # noqa
+from model_state import State # noqa
 
 
 if __name__ == "__main__":
