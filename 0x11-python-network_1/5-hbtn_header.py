@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Send a request to a URL and display the header variable X-Request-Id"""
+"""Send a request to a URL and display the header variable X-Request-Id
+.......
+.......
+"""
 import requests
 from sys import argv
 
