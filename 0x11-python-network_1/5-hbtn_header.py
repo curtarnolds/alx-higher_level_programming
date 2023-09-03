@@ -3,9 +3,9 @@
 .......
 .......
 """
-import requests
-from sys import argv
+if __name__ == '__main__':
+    import requests
+    from sys import argv
 
-
-res = requests.get(argv[1])
-print(res.headers.get('X-Request-Id'))
+    res = requests.get(argv[1])
+    print(res.headers.get('X-Request-Id'))
