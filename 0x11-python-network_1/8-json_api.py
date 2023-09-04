@@ -15,10 +15,9 @@ if __name__ == '__main__':
 
     try:
         json_str = res.json()
+        if len(json_str) == 0:
+            print('No result')
+        else:
+            print(f"[{json_str['id']}] {json_str['name']}")
     except Exception:
         print('Not a valid JSON')
-
-    if len(json_str) == 0:
-        print('No result')
-    else:
-        print(f"[{json_str['id']}] {json_str['name']}")
