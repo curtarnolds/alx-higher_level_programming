@@ -21,4 +21,4 @@ if __name__ == '__main__':
     if len(json_str) == 0:
         print('No result')
     else:
-        print(f"[{json_str.id} {json_str.name}]")
+        print(f"[{json_str['id']}] {json_str['name']}")
