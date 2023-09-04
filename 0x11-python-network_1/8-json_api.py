@@ -15,7 +15,7 @@ if __name__ == '__main__':
 
     try:
         json_str = res.json()
-    except requests.exceptions.JSONDecodeError:
+    except Exception:
         print('Not a valid JSON')
 
     if len(json_str) == 0:
