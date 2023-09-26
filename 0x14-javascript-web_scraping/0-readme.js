@@ -11,4 +11,4 @@ async function readFile(filePath) {
     }
 }
 
-readFile(process.argv[2])
+readFile(process.argv[2]);
