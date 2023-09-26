@@ -7,7 +7,7 @@ async function readFile(filePath) {
         const data = await fs.readFile(filePath, 'utf-8');
         console.log(data.toString());
     } catch (error) {
-        console.error(error)
+        console.error(error);
     }
 }
 
